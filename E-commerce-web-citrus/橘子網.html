@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base target="_self" />
+    <title>有座橘子園</title>
+    <!-- Page icon -->
+    <link rel="shortcut icon" href="./img/orange.png" />
+    <link rel="bookmark" href="./img/Orange.png" />
+    <!--font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!--stylesheet-->
+    <link rel="stylesheet" href="./style/橘子網stylesheet.css" />
+    <link rel="stylesheet" href="./taiwan_icon/twicon.css" />
+    <!--boxicon-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--表格-->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "Expenses"],
+          ["2004", 400],
+          ["2005", 460],
+          ["2006", 540],
+          ["2007", 820],
+        ]);
+
+        var options = {
+          title: "銷售量",
+          curveType: "function",
+          legend: { position: "bottom" },
+        };
+
+        var chart = new google.visualization.LineChart(
+          document.getElementById("curve_chart")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <meta name="author" content="Selena Tsou" />
+  </head>
+
+  <body>
+    <!--標題-->
+    <header>
+      <img class="logo" src="./img/orange.png" alt="orange1" />
+      <div class="title">
+        <h1 id="big">有座橘子園</h1>
+        <h3 id="small">高山果園 新鮮直送</h3>
+      </div>
+    </header>
+
+    <!--導覽列-->
+    <nav>
+      <ul>
+        <li>
+          <a class="active" href="./橘子網.html"
+            ><i class="twicon-l-wemo"></i> 首頁</a
+          >
+        </li>
+        <li>
+          <a href="./introduction.html"
+            ><i class="twicon-taiwanese-bag"></i> 新鮮水果</a
+          >
+        </li>
+        <li>
+          <a href="./products.html"><i class="twicon-balloon"></i> 商品選購</a>
+        </li>
+        <li>
+          <a href="#contect"><i class="twicon-postbox2"></i>聯絡方式 </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--slide pics-->
+    <ul class="slides">
+      <input type="radio" id="control-1" name="control" checked />
+      <input type="radio" id="control-2" name="control" />
+      <input type="radio" id="control-3" name="control" />
+
+      <!--  Left/Right Button  -->
+      <div class="navigator slide-1">
+        <label for="control-3">
+          <i class="bx bx-chevron-left"></i>
+        </label>
+        <label for="control-2">
+          <i class="bx bx-chevron-right"></i>
+        </label>
+      </div>
+
+      <div class="navigator slide-2">
+        <label for="control-1">
+          <i class="bx bx-chevron-left"></i>
+        </label>
+        <label for="control-3">
+          <i class="bx bx-chevron-right"></i>
+        </label>
+      </div>
+
+      <div class="navigator slide-3">
+        <label for="control-2">
+          <i class="bx bx-chevron-left"></i>
+        </label>
+        <label for="control-1">
+          <i class="bx bx-chevron-right"></i>
+        </label>
+      </div>
+      <!--  /Left/Right Button  -->
+
+      <li class="slide">
+        <img src="./img/citrus-landspace1.jpg" class="slide-img" alt="cover" />
+      </li>
+      <li class="slide">
+        <img src="./img/citrus-landspace2.jpg" class="slide-img" alt="cover" />
+      </li>
+      <li class="slide">
+        <img src="./img/citrus-landspace3.jpg" class="slide-img" alt="cover" />
+      </li>
+
+      <div class="controls-visible">
+        <label for="control-1"></label>
+        <label for="control-2"></label>
+        <label for="control-3"></label>
+      </div>
+    </ul>
+
+    <!--主要內容-->
+    <main>
+      <section class="left">
+        <p>
+          有座橘子園位於新竹峨嵋鄉。這裡的每棵果樹都由果園主人細心照顧。<br />經過品質把關的水果個個都鮮甜並富含水分，也有滿滿的營養很適合全家大小<br />一起分享。
+          主打商品為桶柑、砂糖橘、柳丁、木瓜柳丁等。<br />
+        </p>
+        <!--<div id="curve_chart" style="width: 800px; height: 500px"></div>-->
+      </section>
+      <section class="right">
+        <h4>果園位置在哪呢?</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58009.38845002188!2d120.93498953798957!3d24.67234795400456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34684eb93093bb71%3A0x7a97ee13e5a16111!2zMzE15paw56u557ij5bOo55yJ6YSJ!5e0!3m2!1szh-TW!2stw!4v1669013841245!5m2!1szh-TW!2stw"
+          width="250"
+          height="250"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+    <!--Footer-->
+    <footer>
+      <ul id="contect">
+        <li class="contactinfo">
+          <h2>聯絡資訊</h2>
+        </li>
+        <li class="contactinfo">有座橘子園 - 高山果園</li>
+        <li class="contactinfo">訂購專線 : 0910 - 055688</li>
+        <li class="contactinfo">
+          客服時間 : 周一~周五 AM9:00 - 12:00 . PM 13:00 - 18:00
+        </li>
+        <li class="contactinfo">copy right @ 2022 有座橘子園</li>
+      </ul>
+    </footer>
+  </body>
+</html>

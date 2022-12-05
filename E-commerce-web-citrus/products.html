@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="minyi tsou" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <meta name="rating" content="General" />
+    <!--網頁分級-->
+    <base target="_self" />
+    <meta name="description" content="" />
+    <title>有座橘子園-商品選購</title>
+    <link rel="stylesheet" href="./style/product_style.css" />
+    <!--boxicon-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Page icon -->
+    <link rel="shortcut icon" href="./img/Orange.png" />
+    <link rel="bookmark" href="./img/Orange.png" />
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <!--Nav-->
+      <div class="nav container">
+        <a href="./橘子網.html" class="head-url"
+          ><div class="logo-img"></div>
+          <span>首頁</span></a
+        >
+        <!--onmouseover="over(this)"
+            onmouseout="out(this)"
+        <script>
+          function over(obj) {
+            /*obj.innerHTML = "首頁";*/
+            obj.style.visibility = "hidden";
+          }
+          function out(obj) {
+            /*obj.innerHTML = "移出了";*/
+            /*obj.style.background = "white";*/
+            obj.style.visibility = "visible";
+          }
+        </script>-->
+
+        <a href="#" class="logo">有座橘子園</a>
+        <!--cart icon-->
+        <i class="bx bx-shopping-bag" id="cart-icon"></i>
+        <!--cart-->
+        <div class="cart">
+          <h2 class="cart-title">購物車</h2>
+          <!--Content-->
+          <div class="cart-content">
+            <div class="cart-box">
+              <img src="./img/product2.jpg" alt="" class="cart-img" />
+              <div class="detail-box">
+                <div class="cart-product-title">Mandarin</div>
+                <div class="cart-price">$50/1kg</div>
+                <input type="number" value="1" class="cart-quantity" />
+              </div>
+              <!--Remove Cart-->
+              <i class="bx bxs-trash-alt cart-remove"></i>
+            </div>
+          </div>
+          <!--Total-->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!--Buy Button-->
+          <button type="button" class="btn-buy">立即結帳</button>
+          <!--Close cart-->
+          <i class="bx bx-x" id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+    <!--shop-->
+    <section class="shop container">
+      <h2 class="section-title">商品</h2>
+      <!--Content-->
+      <div class="shop-content">
+        <!--Box1-->
+        <div class="product-box">
+          <img src="./img/product1.jpg " alt="" class="product-img" />
+          <h2 class="product-title">紅肉柳丁</h2>
+          <span class="price">$50/1Kg</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!--Box2-->
+        <div class="product-box">
+          <img src="./img/product2.jpg" alt="" class="product-img" />
+          <h2 class="product-title">橘子</h2>
+          <span class="price">$55/1Kg</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!--Box3-->
+        <div class="product-box">
+          <img src="./img/product3.jpg " alt="" class="product-img" />
+          <h2 class="product-title">砂糖橘</h2>
+          <span class="price">$70/1Kg</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!--Box4-->
+        <div class="product-box">
+          <img src="./img/product1.jpg " alt="" class="product-img" />
+          <h2 class="product-title">orange2</h2>
+          <span class="price">$50/1Kg</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!--Box5-->
+        <div class="product-box">
+          <img src="./img/product2.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Mandarin2</h2>
+          <span class="price">$55/1Kg</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!--Box6-->
+        <div class="product-box">
+          <img src="./img/product3.jpg " alt="" class="product-img" />
+          <h2 class="product-title">Tangerine2</h2>
+          <span class="price">$75/1Kg</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+      </div>
+    </section>
+    <!--Link TO js-->
+    <script src="./js/buy.js"></script>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif, "jf open 粉圓 1.0";
+  /*font-family: "jf open 粉圓 1.0", "微軟正黑體", "源泉圓體 TTF Regular";*/
+}
+header {
+  position: static;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe8bb;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+.title {
+  margin-left: 50px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+#big {
+  color: #903535;
+}
+#small {
+  color: #f88351;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #f07c3a;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  /*margin-left: 34%;*/
+}
+nav ul li {
+  /*padding: 0.5rem 1rem;*/
+  display: flex;
+}
+nav ul li a {
+  color: rgb(223, 202, 202);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: 0.5rem 2rem;
+  transition: all 0.25s ease;
+}
+nav ul li a i {
+  font-size: 2rem;
+}
+.active {
+  color: white;
+}
+nav ul li a:hover {
+  background-color: #e27434;
+  color: white;
+}
+
+body {
+  background-color: #ffffe6;
+}
+
+footer {
+  background-color: #ef7e06;
+  color: #fff;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+footer h2 {
+  text-decoration: underline;
+}
+
+/*slide*/
+ul.slides {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  list-style: none;
+  background-color: #eee;
+  overflow: hidden;
+}
+.slide-img {
+  position: absolute;
+  /*justify-content: center;*/
+  left: 0;
+}
+li.slide {
+  width: inherit; /*繼承父層的設定*/
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+  font-size: 120px;
+  color: #fff;
+  transition: 0.8s ease-in-out;
+}
+.slide:nth-of-type(1) {
+  background-color: rgb(181, 253, 253);
+}
+.slide:nth-of-type(2) {
+  background-color: rgb(238, 255, 142);
+  left: 100%;
+}
+.slide:nth-of-type(3) {
+  background-color: rgb(218, 162, 255);
+  left: 200%;
+}
+
+input[type="radio"] {
+  position: relative;
+  z-index: 100;
+  display: none;
+}
+.controls-visible {
+  position: absolute;
+  width: 100%;
+  bottom: 12px;
+  text-align: center;
+}
+
+.controls-visible label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 3px;
+  border: 2px solid #fff;
+}
+/*將lable和對應的(圖片及radio)連結*/
+.slides
+  input[type="radio"]:nth-of-type(1):checked
+  ~ .controls-visible
+  label:nth-of-type(1) {
+  background-color: #333;
+}
+.slides
+  input[type="radio"]:nth-of-type(2):checked
+  ~ .controls-visible
+  label:nth-of-type(2) {
+  background-color: #333;
+}
+.slides
+  input[type="radio"]:nth-of-type(3):checked
+  ~ .controls-visible
+  label:nth-of-type(3) {
+  background-color: #333;
+}
+/*變換到lable對應的圖片*/
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide {
+  transform: translateX(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide {
+  transform: translateX(-100%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide {
+  transform: translateX(-200%);
+}
+/*slide-end*/
+/* Left/Right Button Classes Below */
+.navigator {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 100%;
+  z-index: 100;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  /*box-sizing: border-box;*/
+  display: none;
+}
+.navigator i {
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.549);
+  cursor: pointer;
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~ .navigator:nth-of-type(1) {
+  display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked ~ .navigator:nth-of-type(2) {
+  display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked ~ .navigator:nth-of-type(3) {
+  display: flex;
+}
+
+/* Left/Right Button Classes Below-end */
+
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.left,
+section.right {
+  padding: 1.5rem;
+}
+section.left {
+  flex: 4 1 350px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+section.left p {
+  text-indent: 2em;
+  margin: 2rem 2rem;
+  font-size: 1.15rem;
+  color: rgb(81, 46, 46);
+}
+section.right {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(81, 46, 46);
+}
+#curve_chart {
+  width: 100%;
+  height: 80%;
+}
+
+/*scroll bar setting*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffe8bb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e4d0a8;
+}
+/*end of scroll bar setting*/
+
+/*RWD setting*/
+@media screen and (max-width: 550px) {
+  #curve_chart {
+    width: 100%;
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
