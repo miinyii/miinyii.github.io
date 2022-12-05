@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+*{
+    font-size: 30px;
+    font-family: 'sail','華康采風體W3','源泉圓體 TTF Regular';
+    box-sizing: border-box;    
+}
+
+a:link{
+    /* //設定還沒有瀏覽過的連結 */
+    display: flex;
+    text-decoration:none;
+    color:#a364af;
+    padding: 0rem;
+    margin: 0.2rem;
+    }
+    a:visited {
+    /* //設定已經瀏覽過的連結 */
+    color:#481d53;
+    
+    }
+    a:hover {
+    /* //設定滑鼠移經的連結 */
+   
+    background-color:#667abd;
+    
+    }
+    a:active {
+    /* //設定正在點選的連結 */
+    text-decoration:none;
+    color:#7b7167;
+    
+    }
+.nav{
+    width: 100%;
+    background-color: #4c5c90;
+    color: #bdcbf1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+/* about me */
+main{
+    background-color: rgb(147, 209, 224);
+}
+.aboutme{
+    width: 100%;
+    height: 100%;
+    display:grid;
+    background-color: #fdfdfd;
+    background-image:url( ' http://picsum.photos/1500/500?rndon=1' );
+    background-repeat:no-repeat;
+    justify-content: space-around;
+    padding: 25rem;
+
+}
