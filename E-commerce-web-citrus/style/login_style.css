@@ -1,0 +1,252 @@
+/*Google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif, "微軟正黑體";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  position: static;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe8bb;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+.title {
+  margin-left: 50px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+#big {
+  color: #903535;
+}
+#small {
+  color: #f88351;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #f07c3a;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  /*margin-left: 34%;*/
+}
+nav ul li {
+  /*padding: 0.5rem 1rem;*/
+  display: flex;
+}
+nav ul li a {
+  color: rgb(223, 202, 202);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: 0.5rem 2rem;
+  transition: all 0.25s ease;
+}
+nav ul li a i {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-right: 5px; /*icon&字加上空隙*/
+}
+.active {
+  color: white;
+}
+nav ul li a:hover {
+  background-color: #e27434;
+  color: white;
+}
+.container {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffe6;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.form-box {
+  position: relative;
+  margin: 60px 0;
+  width: 500px;
+  height: 600px;
+  background-color: #ffffff;
+  /*border: 1px solid #d8d7d7;*/
+  box-shadow: 5px 10px 5px rgba(149, 147, 147, 0.496);
+  overflow: hidden;
+}
+.login-enroll-Nav {
+  display: flex;
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  border: 3px solid #f07c3a;
+  border-radius: 30px;
+}
+.toggle-btn {
+  padding: 10px 34px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  color: #603232;
+  font-size: 1.2rem;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, rgb(255, 133, 133), #ffc885) /*#ffe8bb*/;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.social-icon {
+  margin: 20px auto;
+  text-align: center;
+}
+.social-icon img {
+  width: 40px;
+  margin: 0 12px;
+  box-shadow: 0 0 20px 0 #7f7f7f3d;
+  border-radius: 50%;
+}
+/*li {
+  font-size: 1.5rem;
+  color: #603232;
+  text-align: center;
+}
+.loginpage-btn {
+  flex: 1 1 250px;
+  padding: 20px 15px;
+  cursor: pointer;
+}
+.loginpage-btn:hover {
+  background-color: #eaeae4;
+}
+.enrollpage-btn {
+  flex: 1 1 250px;
+  padding: 20px 15px;
+  background-color: #d7d7d7;
+  box-shadow: inset 2px -2px 2px #8d8d8d8b;
+  cursor: pointer;
+}
+.enrollpage-btn:hover {
+  background-color: #8d8d8d8b;
+}*/
+.login-form {
+  position: absolute;
+  width: 440px;
+  margin: 30px 20px;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #603232;
+}
+label {
+  margin: 0px 5px;
+}
+.input-field {
+  border: #e2d9d9;
+  background-color: #f4f4f4;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+}
+input[type="submit"] {
+  width: 30%;
+  background-color: #ffe8bb;
+  color: #603232;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  box-shadow: 2px 4px 5px rgba(149, 147, 147, 0.496);
+}
+
+input[type="submit"]:hover {
+  background-color: #e6d2ab;
+}
+.forget {
+  font-size: 1rem;
+  color: #7e7e7e;
+}
+#login {
+  left: 0px;
+  transition: 0.5s;
+}
+#register {
+  left: 500px;
+  transition: 0.5s;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  margin-right: 10px;
+  user-select: none; /* 防止文字被滑鼠選取反白 */
+  position: absolute;
+  left: 60px;
+}
+span {
+  font-size: 1rem;
+  position: absolute;
+  left: 100px;
+  bottom: 84px;
+}
+/*---------------------------------------------------------------------------------*/
+/*scroll bar setting*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffe8bb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e4d0a8;
+}
+/*end of scroll bar setting*/
+/*---------------------------------------------------------------------------------*/
+
+/*Rwd*/
+@media screen and (max-width: 780px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}

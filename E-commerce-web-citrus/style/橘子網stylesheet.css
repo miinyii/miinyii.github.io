@@ -94,11 +94,15 @@ ul.slides {
   width: 100%;
   height: 700px;
   list-style: none;
-  background-color: #eee;
+  background-color: transparent;
+  background-size: auto;
   overflow: hidden;
 }
 .slide-img {
   position: absolute;
+  top: 0;
+  width: 100%;
+
   /*justify-content: center;*/
   left: 0;
 }
@@ -117,14 +121,14 @@ li.slide {
   transition: 0.8s ease-in-out;
 }
 .slide:nth-of-type(1) {
-  background-color: rgb(181, 253, 253);
+  background-color: #ffffe6;
 }
 .slide:nth-of-type(2) {
-  background-color: rgb(238, 255, 142);
+  background-color: #ffffe6;
   left: 100%;
 }
 .slide:nth-of-type(3) {
-  background-color: rgb(218, 162, 255);
+  background-color: #ffffe6;
   left: 200%;
 }
 
@@ -223,19 +227,24 @@ section.right {
   padding: 1.5rem;
 }
 section.left {
-  flex: 4 1 350px;
+  flex: 4 1 500px;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  color: rgb(81, 46, 46);
 }
 section.left p {
   text-indent: 2em;
-  margin: 2rem 2rem;
-  font-size: 1.15rem;
-  color: rgb(81, 46, 46);
+  margin: 1rem 2rem;
+  font-size: 1.2rem;
+}
+section.left h2 {
+  margin: 0 2rem;
+  font-size: 1.8rem;
 }
 section.right {
-  flex: 1 1 250px;
+  flex: 2 1 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,17 +260,14 @@ section.right {
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0);
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #ffe8bb;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #e4d0a8;
@@ -269,10 +275,14 @@ section.right {
 /*end of scroll bar setting*/
 
 /*RWD setting*/
-@media screen and (max-width: 550px) {
+
+@media screen and (min-width: 350px) and (max-width: 550px) {
   #curve_chart {
     width: 100%;
-    height: 40%;
+    height: 30vh;
+  }
+  ul.slides {
+    height: 50vh;
   }
 }
 
@@ -280,5 +290,30 @@ section.right {
   nav ul {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 350px) {
+  ul.slides {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 535px) {
+  ul.slides {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 535px) and (max-width: 590px) {
+  ul.slides {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 590px) and (max-width: 850px) {
+  ul.slides {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 850px) and (max-width: 1045px) {
+  ul.slides {
+    height: 500px;
   }
 }
